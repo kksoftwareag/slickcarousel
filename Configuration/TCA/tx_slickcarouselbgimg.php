@@ -21,7 +21,7 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'iconfile' => 'EXT:slickcarousel/slick.svg'
+        'iconfile' => 'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     'interface' => [
         'showRecordFieldList' => '

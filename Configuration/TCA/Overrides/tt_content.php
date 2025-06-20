@@ -104,7 +104,7 @@ $slick_default_fields = [
     [
         'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbasic.title',
         'slickcarouselbasic',
-        'EXT:slickcarousel/slick.svg'
+        'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
@@ -166,7 +166,7 @@ $GLOBALS['TCA']['tt_content']['types']['slickcarouselbasic']['columnsOverrides']
     [
         'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselsync.title',
         'slickcarouselsync',
-        'EXT:slickcarousel/slick.svg'
+        'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
@@ -250,7 +250,7 @@ $GLOBALS['TCA']['tt_content']['types']['slickcarouselsync']['columnsOverrides'][
     [
         'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarousel.title',
         'slickcarousel',
-        'EXT:slickcarousel/slick.svg'
+        'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
@@ -311,7 +311,7 @@ $GLOBALS['TCA']['tt_content']['types']['slickcarousel']['columnsOverrides']['sli
     [
         'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbging.title',
         'slickcarouselbgimg',
-        'EXT:slickcarousel/slick.svg'
+        'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
