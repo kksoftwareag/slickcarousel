@@ -5,7 +5,6 @@ return [
         'sortby' => 'sorting',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'title' => 'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbging.title',
         'delete' => 'deleted',
         'versioningWS' => true,
@@ -22,14 +21,6 @@ return [
             'endtime' => 'endtime',
         ],
         'iconfile' => 'EXT:slickcarousel/Resources/Public/slick.svg'
-    ],
-    'interface' => [
-        'showRecordFieldList' => '
-        hidden,
-        headline,
-        subline,
-        image,
-        ',
     ],
     'types' => [
         '1' => [
@@ -55,7 +46,7 @@ return [
                 'type' => 'check',
                 'items' => [
                     '1' => [
-                        '0' => 'LLL:EXT:cms/locallang_ttc.xlf:hidden.I.0'
+                        'label' => 'LLL:EXT:cms/locallang_ttc.xlf:hidden.I.0'
                     ]
                 ]
             ]
@@ -64,9 +55,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime',
+                'type' => 'datetime',
                 'default' => 0
             ],
             'l10n_mode' => 'exclude',
@@ -76,9 +65,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime',
+                'type' => 'datetime',
                 'default' => 0,
                 'range' => [
                     'upper' => mktime(0, 0, 0, 1, 1, 2038)
@@ -90,19 +77,7 @@ return [
         'sys_language_uid' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'special' => 'languages',
-                'items' => [
-                    [
-                        'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.allLanguages',
-                        -1,
-                        'flags-multiple'
-                    ],
-                ],
-                'default' => 0,
-            ]
+            'config' => ['type' => 'language']
         ],
         'l10n_parent' => [
             'displayCond' => 'FIELD:sys_language_uid:>:0',
@@ -111,7 +86,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', 0]
+                    ['label' => '', 'value' => 0]
                 ],
                 'foreign_table' => 'tx_slickcarouselbgimg',
                 'foreign_table_where' => 'AND tx_slickcarouselbgimg.uid=###REC_FIELD_l10n_parent### AND tx_slickcarouselbgimg.sys_language_uid IN (-1,0)',
@@ -144,7 +119,10 @@ return [
         ],
         'image' => [
             'label' => 'LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.images',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', [
+            'config' => [
+                ### !!! Watch out for fieldName different from columnName
+                'type' => 'file',
+                'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
                 'appearance' => [
                     'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
                 ],
@@ -162,7 +140,7 @@ return [
                         ]
                     ],
                 ],
-            ], $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'])
+            ]
         ],
     ],
 ];

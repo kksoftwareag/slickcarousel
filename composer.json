@@ -2,15 +2,19 @@
   "name": "kksoftwareag/slickcarousel",
   "description": "slick - the last carousel you'll ever need. For more informations please have a look at https://github.com/misterboe/slickcarousel. If you need more features please create an issue on github.",
   "type": "typo3-cms-extension",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "require": {
-    "typo3/cms-frontend": "^9.5.17 || ^11.5.2",
+    "typo3/cms-frontend": "^12.4.37",
     "fluidtypo3/vhs": "*"
   },
   "authors": [
     {
       "name": "Boris Schauer",
       "email": "me@bschauer.de"
+    },
+    {
+      "name": "Bernhard Sirlinger",
+      "email": "sirlinger@kk-software.de"
     }
   ],
   "autoload": {
