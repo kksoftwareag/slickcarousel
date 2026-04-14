@@ -133,7 +133,7 @@ return [
                                 --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;slickslider,
                                 --palette--;;slickslider'
                         ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
                             'showitem' => '
                                 --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;slickslider,
                                 --palette--;;filePalette'
