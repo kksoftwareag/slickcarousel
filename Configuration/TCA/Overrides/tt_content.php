@@ -35,7 +35,7 @@ $slick_default_fields = [
                                 --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;slickslider,
                                 --palette--;;slickslider'
                     ],
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                    \TYPO3\CMS\Core\Resource\FileType::IMAGE->value => [
                         'showitem' => '
                                 --palette--;LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;slickslider,
                                 --palette--;;filePalette'
@@ -89,8 +89,8 @@ $slick_default_fields = [
     'tt_content',
     'CType',
     [
-        'Slickcarousel',
-        '--div--'
+        'label' => 'Slickcarousel',
+        'value' => '--div--'
     ],
     '--div--',
     'before'
@@ -104,9 +104,9 @@ $slick_default_fields = [
     'tt_content',
     'CType',
     [
-        'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbasic.title',
-        'slickcarouselbasic',
-        'EXT:slickcarousel/Resources/Public/slick.svg'
+        'label' => 'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbasic.title',
+        'value' => 'slickcarouselbasic',
+        'icon' => 'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
@@ -166,9 +166,9 @@ $GLOBALS['TCA']['tt_content']['types']['slickcarouselbasic']['columnsOverrides']
     'tt_content',
     'CType',
     [
-        'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselsync.title',
-        'slickcarouselsync',
-        'EXT:slickcarousel/Resources/Public/slick.svg'
+        'label' => 'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselsync.title',
+        'value' => 'slickcarouselsync',
+        'icon' => 'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
@@ -250,9 +250,9 @@ $GLOBALS['TCA']['tt_content']['types']['slickcarouselsync']['columnsOverrides'][
     'tt_content',
     'CType',
     [
-        'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarousel.title',
-        'slickcarousel',
-        'EXT:slickcarousel/Resources/Public/slick.svg'
+        'label' => 'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarousel.title',
+        'value' => 'slickcarousel',
+        'icon' => 'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
@@ -311,9 +311,9 @@ $GLOBALS['TCA']['tt_content']['types']['slickcarousel']['columnsOverrides']['sli
     'tt_content',
     'CType',
     [
-        'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbging.title',
-        'slickcarouselbgimg',
-        'EXT:slickcarousel/Resources/Public/slick.svg'
+        'label' => 'LLL:EXT:slickcarousel/Resources/Private/Language/be_locallang.xlf:slickcarouselbging.title',
+        'value' => 'slickcarouselbgimg',
+        'icon' => 'EXT:slickcarousel/Resources/Public/slick.svg'
     ],
     '--div--',
     'after'
