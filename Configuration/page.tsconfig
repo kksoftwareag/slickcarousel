@@ -1,9 +1,1 @@
 @import 'EXT:slickcarousel/Configuration/PageTS/PageTS.typoscript'
-
-TCEFORM.tt_content.CType.removeItems := addToList(slickcarouselbasic)
-
-TCEFORM.tt_content.CType.removeItems := addToList(slickcarousel)
-
-TCEFORM.tt_content.CType.removeItems := addToList(slickcarouselbgimg)
-
-TCEFORM.tt_content.CType.removeItems := addToList(slickcarouselsync)
